@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #bdbdbd;
+}
+.navbar-nav{
+    margin-top: $navbar-nav-margin-y;
+    .nav-link {
+        font-weight: 500;
+        margin: 0 $navbar-nav-margin-y $navbar-nav-margin-y 0;
+        text-transform: capitalize;
+    }
+}

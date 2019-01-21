@@ -1,4 +1,43 @@
 extends layouts/master
 
+include mixins/feature-box
+include mixins/portfolio
+
 block content
-    div index
+    section(id="services" class="section-padding")
+        div(class="container")
+            div(class="row")
+                - for (var i = 1 ; i <= 3 ; i++)
+                    div(class="col-md-4")
+                        +feature-box('Service 1 Offer', 'user', '#', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero.')
+
+    section(id="" class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-6 col-md-6")
+                    img(src="" class="img-fluid" alt="alt text")
+                div(class="col-md-6")
+                    h2 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                    | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                    | eaque incidunt, odit omnis quibusdam voluptatibus. Assumenda
+                    | beatae consequuntur delectus dicta dolorem doloremque doloribus
+                    | ea enim eveniet ex exercitationem, ipsam libero nulla perferendis
+                    | provident quia quis repellendus sapiente sequi tenetur vitae voluptatum?
+
+    section(id="portfolio-section" class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-6 col-md-6")
+                    div(class="portfolio-filter text-center p-2")
+                        a(href="#" data-filter="*" class="current btn") All Categories
+                        a(href="#" data-filter="*" class="current btn") Layout
+                        a(href="#" data-filter="*" class="current btn") HTML
+                        a(href="#" data-filter="*" class="current btn") Wordpress
+                        a(href="#" data-filter="*" class="current btn") Responsive
+
+
+                    div(class="portfolioContainer")
+                        div(class="row")
+                            +portfolio('', '')

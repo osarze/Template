@@ -1,0 +1,13 @@
+.header {
+    min-height: 550px;
+    padding-top: 150px;
+    position: relative;
+}
+
+.header-1 {
+    background: #efefef url("../images/bg/dose-media-424257-unsplash.jpg") no-repeat fixed center center;
+    .page-scroll {
+        bottom: 5px;
+        position: absolute;
+    }
+}

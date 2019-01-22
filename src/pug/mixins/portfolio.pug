@@ -1,0 +1,13 @@
+mixin portfolio(classes, image, overlayText)
+    div(class="col-lg-4 col-md-6 col-sm-12 col-xs-12 portfolio " + classes)
+        figure(class="portfolio-item portfolio-effect__item portfolio-item--eff2")
+            img(class="img-fluid" src=require('../images/portfolio/' + image) alt="")
+            figcaption(class="portfolio-item__info")
+                h5(class="portfolio-item__header") #{'Example OF Example'}
+                div(class="portfolio-item__links")
+                    div(class="portfolio-item__link-block")
+                        a(href="#" class="portfolio-item__link")
+                            i(class="fa fa-search")
+                    div(class="portfolio-item__link-block")
+                        a(href="#" class="portfolio-item__link")
+                            i(class="fa fa-link")

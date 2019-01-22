@@ -4,6 +4,9 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
+const SITE_NAME = "Agency Template";
 
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
@@ -100,6 +103,8 @@ module.exports = {
             hash: true,
             title: "Home",
             inject: false,
+            website_name: SITE_NAME,
+            portfolios: require('./src/data/portfolios.json')
         }),
         new BrowserSyncPlugin(
             // BrowserSync options
@@ -109,6 +114,7 @@ module.exports = {
                 proxy: PROXY
             }
         ),
+        // new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
         new CleanWebpackPlugin(['dist'])
     ]
 };

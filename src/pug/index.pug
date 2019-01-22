@@ -4,40 +4,100 @@ include mixins/feature-box
 include mixins/portfolio
 
 block content
-    section(id="services" class="section-padding")
+    section(id="service-section" class="section-padding")
         div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    h2(class="text-center mb-5") Our Exquisite Service
+
             div(class="row")
                 - for (var i = 1 ; i <= 3 ; i++)
                     div(class="col-md-4")
                         +feature-box('Service 1 Offer', 'user', '#', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero.')
 
-    section(id="" class="section-padding")
+    section(id="" class="grey-bg section-padding")
         div(class="container")
             div(class="row")
                 div(class="col-lg-6 col-md-6")
-                    img(src="" class="img-fluid" alt="alt text")
+                    img(src=require("../images/app-development.png") class="img-fluid" alt="alt text")
                 div(class="col-md-6")
                     h2 Lorem ipsum dolor sit amet, consectetur adipisicing.
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
-                    | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
-                    | eaque incidunt, odit omnis quibusdam voluptatibus. Assumenda
-                    | beatae consequuntur delectus dicta dolorem doloremque doloribus
-                    | ea enim eveniet ex exercitationem, ipsam libero nulla perferendis
-                    | provident quia quis repellendus sapiente sequi tenetur vitae voluptatum?
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | eaque incidunt, odit omnis quibusdam voluptatibus. Assumenda
+                        | beatae consequuntur delectus dicta dolorem doloremque doloribus
+                        | ea enim eveniet ex exercitationem, ipsam libero nulla perferendis
+                        | provident quia quis repellendus sapiente sequi tenetur vitae voluptatum?
 
     section(id="portfolio-section" class="section-padding")
         div(class="container")
             div(class="row")
-                div(class="col-lg-6 col-md-6")
-                    div(class="portfolio-filter text-center p-2")
+                div(class="col-md-12")
+                    h2(class="text-center") Our Extra Ordinary Works
+
+            div(class="row")
+                div(class="col-lg-12 col-md-12")
+                    div(class="portfolio-filter text-center m-4")
                         a(href="#" data-filter="*" class="current btn") All Categories
-                        a(href="#" data-filter="*" class="current btn") Layout
-                        a(href="#" data-filter="*" class="current btn") HTML
-                        a(href="#" data-filter="*" class="current btn") Wordpress
-                        a(href="#" data-filter="*" class="current btn") Responsive
+                        a(href="#" data-filter=".layout" class="current btn") Layout
+                        a(href="#" data-filter=".html" class="current btn") HTML
+                        a(href="#" data-filter=".wordpress" class="current btn") Wordpress
+                        a(href="#" data-filter=".responsive" class="current btn") Responsive
+                        a(href="#" data-filter=".design" class="current btn") Design
 
 
-                    div(class="portfolioContainer")
+                    div(class="portfolio-container")
                         div(class="row")
-                            +portfolio('', '')
+                            -var portfolios= htmlWebpackPlugin.options.portfolios
+                            - for (var i = 1 ; i <= 6 ; i++)
+                                +portfolio(portfolios[i].classes, portfolios[i].image, portfolios[i].overlay)
+
+    section(id="testimonial-section" class="section-padding grey-bg")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    h2(class="text-center") Clients Feedback
+
+            div(class="row justify-content-center")
+                div(class="col-lg-8")
+                    div(class="owl-carousel owl-theme testimonies-content text-center")
+                        div(class="item")
+                            div(class="testimonial-cont")
+                                i(class="fa fa-quote-left")
+                                blockquote Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  unknown printer took a galley of type and scrambled it to make a type
+
+                            div(class="testimonial-info")
+                                h6 Alex Jhonson
+                                span - Gest Tech
+                                b  CTO
+
+                        div(class="item")
+                            div(class="testimonial-cont")
+                                i(class="fa fa-quote-left")
+                                blockquote Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  unknown printer took a galley of type and scrambled it to make a type
+
+                            div(class="testimonial-info")
+                                h6 Antonio
+                                span - Gest Tech
+                                    b  CTO
+
+                        div(class="item")
+                            div(class="testimonial-cont")
+                                i(class="fa fa-quote-left")
+                                blockquote Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  unknown printer took a galley of type and scrambled it to make a type
+
+                            div(class="testimonial-info")
+                                h6 Emmanuel OKahamafe
+                                span - Gest Tech
+                                    b  CTO
+
+    section(id="cta-section" class="section-padding text-center")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-12 col-md-12")
+                    h3 Ready to get started
+                        strong Let's Talk
+                    p  Take your business to the next level with a train marketing expert. We bring decades of experience
+                        | to help boost your business. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate eum pariatur quam sit soluta.
+                    a(href="#" class="btn btn-outline-primary btn-lg") Hire Us &rarr;

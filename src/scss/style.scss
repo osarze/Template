@@ -1,12 +1,38 @@
 @import "variable";
+@import "mixins";
 @import "~bootstrap/scss/bootstrap";
+@import "button";
 @import "header";
 @import "navbar";
 @import "feature-box";
+@import "portfolio";
+@import "typography";
 
 $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 @import "~font-awesome/scss/font-awesome";
+@import "~animate.css";
 
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
+
+body {
+    line-height: 26px;
+}
 .section-padding {
     padding: $section-padding-y $section-padding-x;
+}
+
+.grey-bg {
+    background-color: $light;
+}
+
+#cta-section {
+    background: #efefef url("../images/bg/dose-media-424257-unsplash.jpg") no-repeat fixed center center;
+}
+
+footer {
+    background-color: #435a6b;
+    a {
+        color: #ffffff;
+    }
 }

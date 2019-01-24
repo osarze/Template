@@ -6,10 +6,22 @@ $secondary: #56A6F2;
 $light: #F1F2F4;
 $primary-dark: #36345D;
 
+//Override Write Some Bootstrap Variable Values
 
 //Nav Bar
 $navbar-nav-link-padding-x: 10px;
 $navbar-nav-margin-y: 10px;
+
+//Forms
+$input-border-radius: 0;
+
+//Buttons
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+
+
+//End Bootstrap Override
 
 $section-padding-x: 20px;
 $section-padding-y: 40px;
@@ -26,5 +38,5 @@ $portfolio-link-dimensions: 35px;
 $portfolio-link-offset: 10px;
 $accent-theme-color: #7A306C;
 $accent-theme-color2: #8D909B;
-$dark-theme-color: #101010;
+$dark-theme-color: $primary;
 $light-theme-color: #fff;

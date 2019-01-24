@@ -114,7 +114,7 @@ module.exports = {
                 proxy: PROXY
             }
         ),
-        // new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
+        new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
         new CleanWebpackPlugin(['dist'])
     ]
 };

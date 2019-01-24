@@ -2,22 +2,22 @@
   {
     "classes": "layout html",
     "image": "1.jpg",
-    "overlay": "overlayText Example OF Example"
+    "overlay": "Web Development"
   },
   {
     "classes": "html image overlayText",
     "image": "2.jpg",
-    "overlay": "overlayText Example OF Example"
+    "overlay": "Web Design"
   },
   {
     "classes": "layout responsive design",
     "image": "3.jpg",
-    "overlay": "overlayText Example OF Example"
+    "overlay": "Search Engine Optimize"
   },
   {
     "classes": "wordpress responsive overlayText",
     "image": "4.jpg",
-    "overlay": "overlayText Example OF Example"
+    "overlay": "Mobile Apps"
   },
   {
     "classes": "layout",

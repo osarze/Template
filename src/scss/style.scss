@@ -5,6 +5,7 @@
 @import "header";
 @import "navbar";
 @import "feature-box";
+@import "footer";
 @import "portfolio";
 @import "typography";
 
@@ -17,6 +18,7 @@ $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 
 body {
     line-height: 26px;
+    position: relative;
 }
 .section-padding {
     padding: $section-padding-y $section-padding-x;

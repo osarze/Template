@@ -1,38 +1,53 @@
-footer(class="footer section-padding")
-    div(class="container")
-        div(class="row")
-            div(class="col-md-4")
-                ul(class="list-unstyled")
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
+footer(class="footer pt-5 pb-1")
+    div(class="footer-top")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-3")
+                    h5(class="widget-title") About US
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                        | Aperiam assumenda, distinctio esse est
+                    img(src=require("../../../images/logo.jpg") alt="")
 
-            div(class="col-md-3")
-                ul(class="list-unstyled")
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
+                div(class="col-md-3")
+                    h5(class="widget-title") Heading
+                    ul(class="list-unstyled")
+                        li
+                            a(href="") About Us
+                        li
+                            a(href="") Service
+                        li
+                            a(href="") Products
+                        li
+                            a(href="") Our Works
 
-            div(class="col-md-4")
-                ul(class="list-unstyled")
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-                    li
-                        a(href="") Home
-        div(class="row")
-            div(class="col-md-12")
-                p(class="text-center") copyright 2015
+                div(class="col-md-3")
+                    h5(class="widget-title") Title
+                    ul(class="list-unstyled")
+                        li
+                            a(href="") Home
+                        li
+                            a(href="") Home
+                        li
+                            a(href="") Home
+                        li
+                            a(href="") Home
+
+                div(class="col-md-3")
+                    h5(class="widget-title") Subscribe
+                    p Get update on our promo and Discount
+                    form
+                        div(class="form-group")
+                            input(class="form-control" type="text" placeholder="email")
+                        div(class="form-group")
+                            input(class="btn btn-primary btn-block" type="submit")
+
+
+    div(class="footer-bottom")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    hr
+                    p(class="text-center") &copy; 2019
+                        br
+                        | All Right Reserved #{htmlWebpackPlugin.options.website_name}
+

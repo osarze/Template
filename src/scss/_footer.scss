@@ -1,0 +1,17 @@
+footer {
+  color: #ffffff;
+  .widget-title {
+    &:after {
+      margin-top: 5px;
+      background-color: $gray-500;
+      content: ' ';
+      display: block;
+      height: 2px;
+      width: 20px;
+    }
+  }
+
+  ul li {
+    margin-bottom: 8px;
+  }
+}

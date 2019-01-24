@@ -15,7 +15,7 @@ block content
                     div(class="col-md-4")
                         +feature-box('Service 1 Offer', 'user', '#', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero.')
 
-    section(id="" class="grey-bg section-padding")
+    section(id="about" class="grey-bg section-padding")
         div(class="container")
             div(class="row")
                 div(class="col-lg-6 col-md-6")
@@ -39,12 +39,17 @@ block content
             div(class="row")
                 div(class="col-lg-12 col-md-12")
                     div(class="portfolio-filter text-center m-4")
-                        a(href="#" data-filter="*" class="current btn") All Categories
-                        a(href="#" data-filter=".layout" class="current btn") Layout
-                        a(href="#" data-filter=".html" class="current btn") HTML
-                        a(href="#" data-filter=".wordpress" class="current btn") Wordpress
-                        a(href="#" data-filter=".responsive" class="current btn") Responsive
-                        a(href="#" data-filter=".design" class="current btn") Design
+                        a(href="#" data-filter="*" class="current btn btn-outline-primary") All Categories
+
+                        a(href="#" data-filter=".layout" class="current btn btn-outline-primary") Layout
+
+                        a(href="#" data-filter=".html" class="current btn btn-outline-primary") HTML
+
+                        a(href="#" data-filter=".wordpress" class="current btn btn-outline-primary") Wordpress
+
+                        a(href="#" data-filter=".responsive" class="current btn btn-outline-primary") Responsive
+                        a(href="#" data-filter=".design" class="current btn btn-outline-primary") Design
+
 
 
                     div(class="portfolio-container")
@@ -101,3 +106,47 @@ block content
                     p  Take your business to the next level with a train marketing expert. We bring decades of experience
                         | to help boost your business. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate eum pariatur quam sit soluta.
                     a(href="#" class="btn btn-outline-primary btn-lg") Hire Us &rarr;
+
+    section(id="contact-section" class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-12 col-md-12")
+                    h3(class="text-center") Send Us a Message
+                        strong Message
+                    p  You can visit our Office or Send us Message below
+
+        div(class="container")
+            div(class="row")
+                div(class="col-md-6")
+                    p
+                        i(class="fa fa-phone")
+                        |  +(234) 802xxxxxxx
+                        br
+                        i(class="fa fa-envelope")
+                            |  info@example.com
+                        br
+                        i(class="fa fa-home")
+                            |  64 Lorem ipsum dolor sit amet, consectetur.
+
+
+
+                div(class="col-md-5")
+                    form
+                        div(class="form-group")
+                            label(for="name" class="sr-only") Name
+                            input(type="text" class="form-control" id="name" placeholder="Name")
+
+                        div(class="form-group")
+                            label(for="email" class="sr-only") Email
+                            input(type="text" class="form-control" id="email" placeholder="Email")
+
+                        div(class="form-group")
+                            label(for="subject" class="sr-only") Sbject
+                            input(type="text" class="form-control" id="subject" placeholder="Subject")
+
+                        div(class="form-group")
+                            label(for="message" class="sr-only") Message
+                            textarea(class="form-control" id="message" placeholder="Your Message")
+
+                        div(class="form-group")
+                            input(type="submit" class="btn btn-primary" id="submit")

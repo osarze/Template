@@ -1,12 +1,8 @@
-//.portfolio-effect {
-//    display: flex;
-//    justify-content: space-between;
-//}
-
+.portfolio-filter .btn{
+    margin: 2px;
+}
 .portfolio-item {
     @include img-position();
-
-    //width: $portfolio-item-width;
     height: $portfolio-item-height;
 }
 
@@ -24,10 +20,8 @@
 
 .portfolio-item__header {
     position: relative;
-
     margin: 0 0 20px 0;
     padding: 15px 0;
-
     font: {
         size: 22px;
     }
@@ -36,13 +30,10 @@
 
     &:after {
         @include position-absolute($bottom: 0, $left: 0);
-
         display: block;
         height: 2px;
         width: 100%;
-
         content: '';
-
         background-color: $accent-theme-color2;
     }
 }
@@ -53,7 +44,6 @@
 
 .portfolio-item__link-block {
     position: relative;
-
     width: $portfolio-link-dimensions;
     height: $portfolio-link-dimensions;
     margin-right: $portfolio-link-offset;

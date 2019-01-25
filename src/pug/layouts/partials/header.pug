@@ -1,13 +1,22 @@
-header(class="header header-1")
-    div(class="container")
-        div(class="row")
-            div(class="col-md-12")
-                div(class="intro-text mt-5 text-center")
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, veniam.
-                    h1 This is an Header Text
-                    a(href="#" class="btn btn-primary btn-lg") Hire Us
+if htmlWebpackPlugin.options.filename === "index.html"
+    header(class="header home-page-header")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    div(class="intro-text mt-5 text-center")
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, veniam.
+                        h1 This is an Header Text
+                        a(href="#" class="btn btn-primary btn-lg") Hire Us
 
-    span(class="d-flex justify-content-center")
-        a(href="#service-section" class="btn btn-outline-primary page-scroll" id="scroll-to-service")
-            span(class="sr-only") Scroll to service
-            i(class="fa fa-angle-down infinite animated heartBeat delay-2s")
+        span(class="d-flex justify-content-center")
+            a(href="#service-section" class="btn btn-outline-primary page-scroll" id="scroll-to-service")
+                span(class="sr-only") Scroll to service
+                i(class="fa fa-angle-down infinite animated heartBeat delay-2s")
+else
+    header(class="header page-banner")
+        div(class="container")
+            div(class="row justify-content-center")
+                div(class="col-md-6")
+                    div(class="page-banner-text text-center")
+                        h1 Page Title
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, veniam.

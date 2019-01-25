@@ -6,7 +6,9 @@
 @import "navbar";
 @import "feature-box";
 @import "footer";
+@import "progress";
 @import "portfolio";
+@import "team";
 @import "typography";
 
 $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
@@ -30,6 +32,10 @@ body {
 
 #cta-section {
     background: #efefef url("../images/bg/dose-media-424257-unsplash.jpg") no-repeat fixed center center;
+}
+
+#map {
+    height: 400px;
 }
 
 footer {

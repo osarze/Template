@@ -1,0 +1,57 @@
+extends layouts/master
+
+include mixins/feature-box
+include mixins/portfolio
+
+block content
+    section(id="about" class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-6 col-md-6")
+                    img(src=require("../images/app-development.png") class="img-fluid" alt="alt text")
+                div(class="col-md-6")
+                    //small Our Company Delivers the best
+                    h2 Who we are and what we do
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | eaque incidunt, odit omnis quibusdam voluptatibus. Assumenda
+                        | beatae consequuntur delectus dicta dolorem doloremque doloribus
+                        | ea enim eveniet ex exercitationem, ipsam libero nulla perferendis
+                        | provident quia quis repellendus sapiente sequi tenetur vitae voluptatum?
+    section(id="" class="alt-bg-color section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-6")
+                    //small Our Company Delivers the best
+                    h2 Our Skills And Expertise
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | Assumenda autem eaque facilis nihil non suscipit, vel. Atque culpa
+                        | eaque incidunt, odit omnis quibusdam voluptatibus. Assumenda
+                        | beatae consequuntur delectus dicta dolorem doloremque doloribus
+                        | ea enim eveniet ex exercitationem, ipsam libero nulla perferendis
+                        | provident quia quis repellendus sapiente sequi tenetur vitae voluptatum?
+                div(class="col-lg-6 col-md-6")
+                    div(class="progress")
+                        div(class="progress-bar w-70" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100") Skills
+                    div(class="progress")
+                        div(class="progress-bar w-85" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100") Communication
+                    div(class="progress")
+                        div(class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100") Speed
+                    div(class="progress")
+                        div(class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100") Delivery
+                    div(class="progress")
+                        div(class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100") Efficiency
+
+
+    section(id="team-section" class="alt-bg-color section-padding")
+        div(class="container")
+            div(class="row")
+                - for (var i = 1 ; i <=4  ; i++)
+                    div(class="col-md-3")
+                        div(class="team text-center")
+                            img(src=require('../images/team/team01.jpg') class="img-fluid rounded-circle" alt="")
+                            h5 Mark Webber
+                            h6(class="") CEO
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry.

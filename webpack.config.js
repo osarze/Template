@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 const SITE_NAME = "Agency Template";
 
@@ -106,6 +107,42 @@ module.exports = {
             website_name: SITE_NAME,
             portfolios: require('./src/data/portfolios.json')
         }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: 'src/pug/about.pug',
+            hash: true,
+            title: "About",
+            inject: false,
+            website_name: SITE_NAME
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'service.html',
+            template: 'src/pug/service.pug',
+            hash: true,
+            title: "Service",
+            inject: false,
+            website_name: SITE_NAME
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: 'src/pug/contact.pug',
+            hash: true,
+            title: "Service",
+            inject: false,
+            website_name: SITE_NAME
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'portfolio.html',
+            template: 'src/pug/portfolio.pug',
+            hash: true,
+            title: "Portfolio",
+            inject: false,
+            website_name: SITE_NAME
+        }),
+
+
         new BrowserSyncPlugin(
             // BrowserSync options
             {
@@ -115,6 +152,25 @@ module.exports = {
             }
         ),
         new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
+        new WebpackNotifierPlugin(),
         new CleanWebpackPlugin(['dist'])
-    ]
+    ],
+    devServer: {
+        stats: {
+            chunks: false,
+            assets: true,
+            colors: true,
+            errors: false,
+            errorDetails: false,
+            hash: false,
+            version: false,
+            timings: false,
+            modules: false,
+            reasons: false,
+            children: false,
+            source: false,
+            warnings: false,
+            publicPath: false
+        }
+    }
 };

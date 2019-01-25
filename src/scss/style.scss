@@ -1,3 +1,10 @@
+$fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
+@import "~font-awesome/scss/font-awesome";
+@import "~animate.css";
+
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
+@import "~venobox/venobox/venobox.css";
 @import "variable";
 @import "mixins";
 @import "~bootstrap/scss/bootstrap";
@@ -6,17 +13,12 @@
 @import "navbar";
 @import "feature-box";
 @import "footer";
+//@import "information-list";
 @import "progress";
 @import "portfolio";
 @import "team";
 @import "typography";
 
-$fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
-@import "~font-awesome/scss/font-awesome";
-@import "~animate.css";
-
-@import "~owl.carousel/dist/assets/owl.carousel.min.css";
-@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
 
 body {
     line-height: 26px;
@@ -26,7 +28,7 @@ body {
     padding: $section-padding-y $section-padding-x;
 }
 
-.grey-bg {
+.alt-bg {
     background-color: $light;
 }
 

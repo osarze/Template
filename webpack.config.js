@@ -55,7 +55,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: '[name].[ext]',
+                            name: '[hash].[ext]',
                             outputPath: 'images/',
                             publicPath: 'images/'
                         }
@@ -121,14 +121,15 @@ module.exports = {
             hash: true,
             title: "Service",
             inject: false,
-            website_name: SITE_NAME
+            website_name: SITE_NAME,
+            services: require('./src/data/services.json')
         }),
 
         new HtmlWebpackPlugin({
             filename: 'contact.html',
             template: 'src/pug/contact.pug',
             hash: true,
-            title: "Service",
+            title: "Contact",
             inject: false,
             website_name: SITE_NAME
         }),
@@ -138,6 +139,16 @@ module.exports = {
             template: 'src/pug/portfolio.pug',
             hash: true,
             title: "Portfolio",
+            inject: false,
+            website_name: SITE_NAME,
+            portfolios: require('./src/data/portfolios.json')
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'portfolio-single.html',
+            template: 'src/pug/portfolio-single.pug',
+            hash: true,
+            title: "View Portfolio Portfolio",
             inject: false,
             website_name: SITE_NAME
         }),
@@ -158,10 +169,8 @@ module.exports = {
     devServer: {
         stats: {
             chunks: false,
-            assets: true,
+            assets: false,
             colors: true,
-            errors: false,
-            errorDetails: false,
             hash: false,
             version: false,
             timings: false,

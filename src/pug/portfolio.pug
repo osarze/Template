@@ -1,0 +1,25 @@
+extends layouts/master
+
+include mixins/portfolio
+
+block content
+    section(class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-12 col-md-12")
+                    div(class="portfolio-filter text-center m-4")
+                        a(href="#" data-filter="*" class="current btn btn-outline-primary") All Categories
+
+                        a(href="#" data-filter=".layout" class="current btn btn-outline-primary") Layout
+
+                        a(href="#" data-filter=".html" class="current btn btn-outline-primary") HTML
+
+                        a(href="#" data-filter=".wordpress" class="current btn btn-outline-primary") Wordpress
+
+                        a(href="#" data-filter=".responsive" class="current btn btn-outline-primary") Responsive
+                        a(href="#" data-filter=".design" class="current btn btn-outline-primary") Design
+
+            div(class="portfolio-container")
+                div(class="row")
+                    each portfolio in  htmlWebpackPlugin.options.portfolios
+                        +portfolio(portfolio.classes, portfolio.image, portfolio.overlay)

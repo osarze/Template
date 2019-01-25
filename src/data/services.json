@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Web Development",
+    "icon": "laptop",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  },
+  {
+    "title": "Web Design",
+    "icon": "radiation",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  },
+  {
+    "title": "Mobile Dev",
+    "icon": "fax",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  },
+  {
+    "title": "Web Development",
+    "icon": "suitcase",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  },
+  {
+    "title": "Research",
+    "icon": "globe",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  },
+  {
+    "title": "Maintenance",
+    "icon": "cogs",
+    "url": "#",
+    "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, libero."
+  }
+]

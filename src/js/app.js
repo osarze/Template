@@ -1,13 +1,10 @@
 import "../scss/style.scss";
 
-// import "bootstrap";
 require("bootstrap");
 let Isotope = require('isotope-layout');
 require("jquery.easing");
-// import "owl.carousel/dist/assets/owl.carousel.min.css";
-// import "owl.carousel/dist/assets/owl.theme.default.min.css";
-
 import "owl.carousel";
+import "venobox"
 
 //Jquery Isotope
 let container = document.querySelector('.portfolio-container');
@@ -65,6 +62,10 @@ $('.testimonies-content').owlCarousel({
 
         }
     }
+});
+
+$(document).ready(function () {
+    $('.venobox').venobox();
 });
 
 //Adding Animate.Css Dynamically

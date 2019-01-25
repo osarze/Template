@@ -1,0 +1,33 @@
+ul.information-list {
+    @include list-unstyled;
+    li {
+        //list-style: none;
+        overflow: hidden;
+        i {
+            float: left;
+            //color: @color1;
+            font-size: 15px;
+            display: inline-block;
+            line-height: 24px;
+        }
+        //span {
+        //    display: block;
+        //    .paragraph;
+        //    margin-bottom: 8px;
+        //    margin-left: 25px;
+        //    color: @color1;
+        //}
+        //border-bottom: 1px solid #dddddd;
+        margin-bottom: 10px;
+        a {
+            .paragraph;
+            display: inline-block;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            //color: @color1;
+        }
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+}

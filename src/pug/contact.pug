@@ -17,16 +17,36 @@ block content
         div(class="container")
             div(class="row")
                 div(class="col-md-6")
-                    p
-                        i(class="fa fa-phone")
-                        |  +(234) 802xxxxxxx
-                        br
-                        i(class="fa fa-envelope")
-                            |  info@example.com
-                        br
-                        i(class="fa fa-home")
-                            |  64 Lorem ipsum dolor sit amet, consectetur.
-
+                    div(class="contact-info-box")
+                        h2 contact Info
+                        div(class="contact-info")
+                            p
+                                i(class="fa fa-map")
+                                |  ADDRESS: Purbasha MGM,<br> London, E2 8DY.
+                        
+                        div(class="contact-info")
+                            p
+                                i(class="fa fa-envelope")
+                                |  EMAIL: info@yoursite.com
+                            
+                        div(class="contact-info")
+                            i(class="fa fa-phone")
+                            p PHONE: +1 800-444-555
+                        div(class="contact-info")
+                            i(class="fa fa-globe")
+                            p WEBSITE: www.yourdomain.com
+                            
+                        h5 Follow Us
+                        ul(class="social-icons")
+                            li
+                                a(class="facebook" href="#")
+                                i(class="fa fa-facebook")
+                            li
+                                a(class="twitter" href="#")
+                                i(class="fa fa-twitter")
+                            li
+                                a(class="google" href="#")
+                                i(class="google-twitter")
 
 
                 div(class="col-md-5")
@@ -49,3 +69,18 @@ block content
 
                         div(class="form-group")
                             input(type="submit" class="btn btn-primary" id="submit")
+
+    script(async=true, defer=true, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxGzO3WBq_C0koJVn_DGhk9P0mkVWlgrk&callback=initMap")
+
+    script.
+        function initMap() {
+            var mighty = {lat: 6.6252919, lng: 3.3233692, };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: mighty
+            })
+        }
+        var marker = new google.maps.Marker({
+            position: mighty,
+            map: map
+        });

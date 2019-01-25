@@ -10,7 +10,8 @@
 }
 
 .page-banner {
-    //background-color: darken($primary, 50%);
+    @include background-image("../images/bg/dose-media-424257-unsplash.jpg");
+    //background: #efefef url("../images/bg/dose-media-424257-unsplash.jpg") no-repeat fixed center center;
     min-height: 250px;
     padding-top: 110px;
     padding-bottom: 50px;

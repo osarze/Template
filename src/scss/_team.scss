@@ -1,0 +1,9 @@
+#team-section .card:hover {
+    @include transition-mix(transform);
+    transform: scale(1);
+}
+
+#team-section .card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px rgba(0,0,0.6,0.8);
+}

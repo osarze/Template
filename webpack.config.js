@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const SITE_NAME = "Agency Template";
 
@@ -87,7 +88,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',//inline-source-map
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -162,6 +163,7 @@ module.exports = {
                 proxy: PROXY
             }
         ),
+        new OptimizeCssAssetsPlugin(),
         new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
         new WebpackNotifierPlugin(),
         new CleanWebpackPlugin(['dist'])

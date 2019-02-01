@@ -10,12 +10,14 @@ $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 @import "~bootstrap/scss/bootstrap";
 @import "button";
 @import "header";
+//@import "";
 @import "navbar";
 @import "feature-box";
 @import "footer";
-//@import "information-list";
+@import "information-list";
 @import "progress";
 @import "portfolio";
+@import "social-icons";
 @import "team";
 @import "typography";
 

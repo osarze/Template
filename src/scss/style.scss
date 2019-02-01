@@ -23,11 +23,11 @@ $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 @import "typography";
 @import "widget";
 @import "code";
+@import "pagination";
 
 
 body {
     line-height: 26px;
-    position: relative;
 }
 .section-padding {
     padding: $section-padding-y $section-padding-x;

@@ -1,0 +1,65 @@
+extends layouts/master
+
+include mixins/portfolio
+
+block content
+    section(class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-9")
+                    h2 Blog Post Grid
+                    div(class="row")
+                        -for (var i = 1 ; i < 7 ; i++)
+                            //div(class="card-deck")
+                            div(class="col-md-4")
+                                div(class="card mb-3")
+                                    img(src=require('../images/bg/dose-media-424257-unsplash.jpg') class="card-img-top" alt="ihiohoi")
+                                    //header
+                                    div(class="card-body")
+                                        h3(class="header-text") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, vel.
+
+                                        p(class="card-tet")
+                                            span(class="author text-muted") By Administrator |
+                                            |
+                                            small(class="text-muted")  21-03-2018 (3 mins ago)
+                                        p(class="card-txt") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+                                            | mculpa distinctio ex rerum sequi voluptates.
+                                            | Asperiores assumenda, aut ncidunt nemo praesentium vel veniam vae.
+                                        br
+                                        a(href='/blog-single.html') [Read More]
+
+                    div(class="row")
+                        //section(class="section-padding")
+                            //div(class="container")
+                            div(class="row")
+                        div(class="col-md-12")
+                            h2 Blog Post List
+
+                            div(class="row")
+                                -for (var i = 1 ; i < 7 ; i++)
+                                    //div(class="card-deck")
+                                    div(class="col-md-12")
+                                        div(class="card mb-3")
+                                            img(src=require('../images/bg/dose-media-424257-unsplash.jpg') class="card-img-top" alt="ihiohoi")
+                                            //header
+                                            div(class="card-body")
+                                                h3(class="header-text") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, vel.
+
+                                                p(class="card-tet")
+                                                    span(class="author text-muted") By Administrator |
+                                                    |
+                                                    |
+                                                    small(class="text-muted")
+                                                        i(class="fa fa-clock") 21-03-2018 (3 mins ago)
+                                                    span(class="text-muted float-right") Categories, Category
+                                                        |
+                                                        |
+                                                        i(class="fa fa-tags") Tags, tag, tag
+
+                                                p(class="card-txt") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+                                                    | mculpa distinctio ex rerum sequi voluptates.
+                                                    | Asperiores assumenda, aut ncidunt nemo praesentium vel veniam vae.
+                                                br
+                                                a(href='/blog-single.html') [Read More]
+                div(class="col-md-3")
+                    include includes/side-bar

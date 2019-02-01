@@ -1,0 +1,46 @@
+div(class="widget")
+    h4(class="widget-title") Search
+    form
+        div(class="form-group")
+            input(class="form-control" type="text" placeholder="Search")
+
+div(class="widget")
+    h4(class="widget-title") Categories List
+    ul
+        -for(var i = 1 ; i <= 5 ; i++)
+            li
+                a(href="#") Web Design
+                |
+                |
+                span(class="float-right badge badge-secondary") 5
+
+div(class="widget widget-post-list")
+    h4(class="widget-title") Recent Post
+    div
+        img(src=require('../../images/portfolio/1.jpg'))
+        h4
+            a(href="#" class="d-block") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, possimus.
+    div
+        img(src=require('../../images/portfolio/1.jpg'))
+        h4
+            a(href="#" class="d-block") Lorem ipsum dolor sit, elit. Commodi, possimus.
+    div
+        img(src=require('../../images/portfolio/1.jpg'))
+        h4
+            a(href="#" class="d-block") Lorem ipsum dolor sit amet, consectetur
+
+div(class="widget widget-post-list")
+    h4(class="widget-title") Recent Post
+    a(href="#" class="btn btn-tag") Develop
+    |
+    |
+    a(href="#" class="btn btn-tag") Developer
+    |
+    |
+    a(href="#" class="btn btn-tag") Developer
+    |
+    |
+    a(href="#" class="btn btn-tag") Developer
+    |
+    |
+    a(href="#" class="btn btn-tag") Developer

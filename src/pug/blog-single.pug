@@ -1,0 +1,142 @@
+extends layouts/master
+
+include mixins/portfolio
+
+block content
+    section(class="section-padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-9")
+                    div(class="row")
+                        div(class="col-md-12")
+                            div(class="card mb-3")
+                                img(src=require('../images/bg/dose-media-424257-unsplash.jpg') class="card-img-top" alt="ihiohoi")
+                                //header
+                                div(class="card-body")
+                                    h3(class="header-text") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, vel.
+
+                                    p(class="card-tet")
+                                        span(class="author text-muted") By Administrator |
+                                        |
+                                        small(class="text-muted")  21-03-2018 (3 mins ago)
+                                    p(class="") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+                                        | mculpa distinctio ex rerum sequi voluptates.
+                                        | Asperiores assumenda, aut ncidunt nemo praesentium vel veniam vae.
+
+                                    blockquote(class="") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolores exercitationem
+                                        | nisi quod quos voluptate voluptatibus. Accusantium ad aliquid aspernatur distinctio doloremque
+                                        | earum iure, nostrum odio omnis porro, unde, velit. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        | elit. Ab aperiam, dolore doloribus ducimus ea esse facilis harum hic quis reiciendis?
+                                        | Dolorum explicabo ipsam laborum mollitia omnis repudiandae rerum saepe sed! Lorem ipsum dolor sit
+                                        | amet, consectetur adipisicing elit. Aperiam dolore eaque iusto magni omnis quia.
+
+                                    p(class="") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolores exercitationem
+                                        | nisi quod quos voluptate voluptatibus. Accusantium ad aliquid aspernatur distinctio doloremque
+                                        | earum iure, nostrum odio omnis porro, unde, velit. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        | elit. Ab aperiam, dolore doloribus ducimus ea esse facilis harum hic quis reiciendis?
+                                        | Dolorum explicabo ipsam laborum mollitia omnis repudiandae rerum saepe sed! Lorem ipsum dolor sit
+                                        | amet, consectetur adipisicing elit. Aperiam dolore eaque iusto magni omnis quia.
+
+                                    ul
+                                        li list item 1
+                                        li list item 1
+                                        li list item 1
+                                        li list item 1
+
+                                    table(class="table")
+                                        thead
+                                            tr
+                                                th S/N
+                                                th Name
+                                                th DOB
+                                                th Inventory
+                                                th DOB
+                                                th Inventory
+                                        tbody
+                                            -for(var i = 1 ; i <=5 ; i++)
+                                                tr
+                                                    td #{ i }
+                                                    td Lorem ipsum.
+                                                    td 12 - 11 - 2017
+                                                    td Inventory
+                                                    td DOB
+                                                    td Inventory
+                                    h1 h1 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                                    h2 h2 Lorem ipsum dolor sit amet, consectetur.
+                                    h3 h3 Lorem ipsum dolor sit amet, consectetur.
+                                    h4 h4 Lorem ipsum dolor sit amet, consectetur.
+                                    h5 h5 Lorem ipsum dolor sit amet, consectetur.
+                                    h6 h6 Lorem ipsum dolor sit amet, consectetur.
+
+                                    pre
+                                        code $i = 8;
+                                        | $ i 8 3 = 9
+                                        | if ($i > 9) {
+                                        |    sacked
+                                        | } else {
+                                        |   nosacked
+                                        | }
+
+                    div(class="row")
+                        div(class="col-md-12")
+                            h4 4 Comments
+                            div(class="comment-list")
+                                div(class="comment-box")
+                                    img(alt="" src=require('../images/team/team01.jpg'))
+                                    div(class="comment-content")
+                                        h4 Kenan Januzi
+                                            a(href='#') Reply
+                                        small(class="text-mute") Jann 23, 2015. 8:30 pm.
+                                        p Class aptent taciti sociosqu litora torquent per conubia per himenaeos. Nulla
+                                            | tristique in semper vel. Vestibulum sodales ante a purus volutpat euismod.
+                                            | roin sodales quam nec ante sollicitudin lacinia.
+
+                                div(class="nested-comment" )
+                                    div(class="comment-box")
+                                        img(alt="" src=require('../images/team/team01.jpg'))
+                                        div(class="comment-content")
+                                            h4 John Doe
+                                                a(href="#") Reply
+                                            span Jann 23, 2015. 8:38 pm.
+                                            p Class aptent taciti sociosqu litora torquent per conubia per himenaeos. Nulla tristique in semper vel.
+
+                                    div(class="comment-box")
+                                        img(alt="" src=require('../images/team/team01.jpg'))
+                                        div(class="comment-content")
+                                            h4 Besim Dauti
+                                                a(href="#") Reply
+                                            span Jann 23, 2015. 8:38 pm.
+                                            p Class aptent taciti sociosqu litora torquent per conubia per himenaeos. Nulla tristique in semper vel.
+
+                                div(class="comment-box")
+                                    img(alt="" src=require('../images/team/team01.jpg'))
+                                    div(class="comment-content")
+                                        h4 Kenan Januzi
+                                            a(href='#') Reply
+                                        small(class="text-mute") Jann 23, 2015. 8:30 pm.
+                                        p Class aptent taciti sociosqu litora torquent per conubia per himenaeos. Nulla
+                                            | tristique in semper vel. Vestibulum sodales ante a purus volutpat euismod.
+                                            | roin sodales quam nec ante sollicitudin lacinia.
+
+                            form(class="comment-form")
+                                h4 Leave a Reply
+                                div(class="form-group")
+                                    label(for="name" class="sr-only")
+                                    input(name="name" id="name" type="text" class="form-control" placeholder="Name (required)")
+
+                                div(class="form-group")
+                                    label(for="name" class="sr-only")
+                                    input(name="mail" id="mail" type="text" class="form-control" placeholder="Email (required)")
+
+                                div(class="form-group")
+                                    label(for="name" class="sr-only")
+                                    input(name="website" id="website" type="text" class="form-control" placeholder="Website")
+
+                                div(class="form-group")
+                                    label(for="name" class="sr-only")
+                                    textarea(name="comment" id="comment" class="form-control" placeholder="Your Message (required)")
+
+                                input(type="submit" id="submit_contact" class="btn btn-primary" value="Post Comment")
+
+                div(class="col-md-3")
+                    include includes/side-bar

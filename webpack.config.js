@@ -106,6 +106,10 @@ module.exports = {
             title: "Home",
             inject: false,
             website_name: SITE_NAME,
+            minify: {
+                collapseWhitespace: false,
+                removeComments: true
+            },
             portfolios: require('./src/data/portfolios.json')
         }),
         new HtmlWebpackPlugin({
@@ -154,6 +158,22 @@ module.exports = {
             website_name: SITE_NAME
         }),
 
+        new HtmlWebpackPlugin({
+            filename: 'blog.html',
+            template: 'src/pug/blog.pug',
+            hash: true,
+            title: "Blog Page",
+            inject: false,
+            website_name: SITE_NAME
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blog-single.html',
+            template: 'src/pug/blog-single.pug',
+            hash: true,
+            title: "Blog Single",
+            inject: false,
+            website_name: SITE_NAME
+        }),
 
         new BrowserSyncPlugin(
             // BrowserSync options
@@ -165,7 +185,9 @@ module.exports = {
         ),
         new OptimizeCssAssetsPlugin(),
         new FaviconsWebpackPlugin('./src/images/home-logo-hi.png'),
-        new WebpackNotifierPlugin(),
+        new WebpackNotifierPlugin({
+            wait: true
+        }),
         new CleanWebpackPlugin(['dist'])
     ],
     devServer: {

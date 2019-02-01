@@ -9,6 +9,7 @@ $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 @import "mixins";
 @import "~bootstrap/scss/bootstrap";
 @import "button";
+@import "comment";
 @import "header";
 //@import "";
 @import "navbar";
@@ -20,6 +21,8 @@ $fa-font-path: "~font-awesome/fonts"; // needed to load font-awesome fonts
 @import "social-icons";
 @import "team";
 @import "typography";
+@import "widget";
+@import "code";
 
 
 body {
